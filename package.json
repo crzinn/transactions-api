@@ -1,0 +1,21 @@
+{
+  "name": "projeto-pessoal",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx watch src/server.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "fastify": "^5.1.0",
+    "knex": "^3.1.0",
+    "sqlite3": "^5.1.7"
+  }
+}
