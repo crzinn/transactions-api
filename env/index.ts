@@ -1,5 +1,5 @@
 import 'dotenv/config'
-import { number, z } from 'zod'
+import { z } from 'zod'
 
 //process.env
 //criar um schema para as variaveis de ambiente (representação de uma estrutura de dados)
@@ -10,5 +10,6 @@ const envSchema = z.object({
 })
 //analisa process.env com base em envSchema
 export const env = envSchema.parse(process.env)
+//envSchema vai analisar(parse) process.env
 
 //estou validando se o process.env esta seguindo o envSchema, ou seja, DATABASE_URL e PORT devem seguir os formatos definidos em envSchema, se não um erro será retornado
