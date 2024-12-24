@@ -8,5 +8,5 @@
 # RN
 
 - [x] A transação pode ser de credito ou debito (soma e subtrai);
-- [ ] Deve ser possivel identificar o usuário que fez a requisição;
-- [ ] O usuário só pode visualizar transações que ele criou;
+- [x] Deve ser possivel identificar o usuário que fez a requisição;
+- [x] O usuário só pode visualizar transações que ele criou;

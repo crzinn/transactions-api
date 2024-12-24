@@ -4,6 +4,11 @@ import { z } from "zod";
 import { randomUUID } from "node:crypto";
 import { checkSessionIdExists } from "../middleware/check-sessionId";
 export async function transactionsRoutes(app: FastifyInstance) {
+    /*middleware global
+    app.addHook('preHandler', async (req, res) => {
+
+    })
+    */
     app.get(
         "/",
         {
