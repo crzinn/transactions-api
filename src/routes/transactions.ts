@@ -2,7 +2,6 @@ import { FastifyInstance } from "fastify";
 import { knex } from "../database";
 import { z } from "zod";
 import { randomUUID } from "node:crypto";
-import { error } from "node:console";
 import { checkSessionIdExists } from "../middleware/check-sessionId";
 export async function transactionsRoutes(app: FastifyInstance) {
     app.get(
@@ -15,7 +14,6 @@ export async function transactionsRoutes(app: FastifyInstance) {
             const transactions = await knex("transactions")
                 .where("session_id", sessionId)
                 .select("*")
-                .first();
             return {
                 transactions,
             };
