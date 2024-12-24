@@ -6,10 +6,10 @@ import cookie from "@fastify/cookie";
 const app = fastify();
 
 //plugins fastify
-app.register(cookie)
+app.register(cookie);
 app.register(transactionsRoutes, {
-    prefix: 'transactions'
-})
+    prefix: "transactions",
+});
 
 app.listen({ port: env.PORT }).then(() => {
     console.log("http server is running!");
