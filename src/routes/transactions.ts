@@ -75,12 +75,12 @@ export async function transactionsRoutes(app: FastifyInstance) {
 
         const { title, amount, type } = createTransactionSchema.parse(req.body);
         //verifica se existe cookie sessionId,se não, retorna undefined
-        let sessionId = req.cookies.sessionId;
+        let sessionId = req.cookies.sessionId; //req.cookies é uma propriedade. cookie é um metodo de res para assinar cookies do mesmo jeito que setCookie.
         //se undefined:
         if (!sessionId) {
             (sessionId = randomUUID()),
                 //res.cookie envia para o navegador um novo cookie chamado sessionId com valor sessionId e um obj de configurações
-                res.cookie("sessionId", sessionId, {
+                res.setCookie("sessionId", sessionId, {
                     path: "/", //define quais caminhos os cookies poderão ser acessados
                     maxAge: 60 * 60 * 24 * 7, //7 days
                 });
